@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Bhasa</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="bg-gray-50">
+  <!-- Navbar -->
+  <nav class="sticky top-0 bg-white border-b border-gray-100 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex items-center">
+          <h1 class="text-2xl font-bold text-[#DC143C]">Bhasa</h1>
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#learn-more" class="text-gray-700 hover:text-[#DC143C]">Learn More</a>
+          <a href="#contact" class="text-gray-700 hover:text-[#DC143C]">Contact</a>
+          <button class="bg-[#DC143C] text-white px-6 py-2 rounded-lg hover:bg-[#B01030] transition">
+            Get Started
+          </button>
+        </div>
+        <div class="md:hidden flex items-center">
+          <button class="text-gray-700" aria-label="Menu">
+            <i data-lucide="menu"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Welcome Section -->
+  <section class="relative bg-[#DC143C] py-20 lg:py-32 text-center">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+      <h2 class="text-5xl font-bold leading-tight mb-6">
+        भाषा अप्प मा स्वागत छ !
+      </h2>
+      <p class="text-xl opacity-90 mb-8">
+        We're here to help you bridge the gap between languages. Start learning Romanized Nepali typing today and make communication effortless.
+      </p>
+      <!-- Cards Section -->
+      <div class="grid gap-8 sm:grid-cols-1 md:grid-cols-3">
+        <!-- First Card -->
+        <div class="bg-white text-[#DC143C] p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+          <h3 class="text-2xl font-bold mb-4">आधारभूत कुराहरू</h3>
+          <p class="text-gray-700 mb-6">रोमनाइज्ड नेपाली टाइपिङका आधारभूत कुराहरू सिक्नुहोस् र बलियो जग निर्माण गर्नुहोस्।</p>
+          <a href="basic1"><button class="bg-[#DC143C] text-white px-4 py-2 rounded hover:bg-[#B01030] transition">Start Now</button></a>
+        </div>
+
+        <!-- Second Card -->
+        <div class="bg-gray-200 text-gray-600 p-6 rounded-lg shadow-lg">
+          <h3 class="text-2xl font-bold mb-4">Coming Soon</h3>
+          <p class="text-gray-500 mb-6">New and exciting courses are on the way. Stay tuned!</p>
+          <button class="bg-gray-400 text-white px-4 py-2 rounded cursor-not-allowed">Unavailable</button>
+        </div>
+
+        <!-- Third Card -->
+        <div class="bg-gray-200 text-gray-600 p-6 rounded-lg shadow-lg">
+          <h3 class="text-2xl font-bold mb-4">Coming Soon</h3>
+          <p class="text-gray-500 mb-6">More courses to enhance your skills are coming shortly!</p>
+          <button class="bg-gray-400 text-white px-4 py-2 rounded cursor-not-allowed">Unavailable</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div>
+          <h3 class="text-xl font-bold mb-4">Bhasa</h3>
+          <p class="text-gray-400">Master Nepali Romanized Typing</p>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="#learn-more" class="text-gray-400 hover:text-white transition">Learn More</a></li>
+            <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+            <li><a href="#faq" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white transition"><i data-lucide="facebook"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white transition"><i data-lucide="twitter"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white transition"><i data-lucide="instagram"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Stay Updated</h4>
+          <form class="space-y-2">
+            <input 
+              type="email" 
+              placeholder="Enter your email"
+              class="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:border-[#DC143C]"
+            >
+            <button class="w-full bg-[#DC143C] px-4 py-2 rounded-lg hover:bg-[#B01030] transition">
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+        <p>&copy; <span id="current-year"></span> Bhasa. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+    
+    // Set current year
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

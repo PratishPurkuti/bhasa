@@ -7,6 +7,97 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="stylesheet" href="css/main.css">
+  <style>
+    /* From Uiverse.io by alexruix */ 
+.form-box {
+  max-width: 300px;
+  background: #f1f7fe;
+  overflow: hidden;
+  border-radius: 16px;
+  color: #010101;
+  
+}
+.relative-center {
+  display: flex;
+  justify-content: center; /* Horizontally centers */
+  align-items: center;    /* Vertically centers */
+  height: 100vh;          /* Full viewport height */
+}
+.form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 24px 24px;
+  gap: 16px;
+  text-align: center;
+}
+
+/*Form text*/
+.title {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #666;
+}
+
+/*Inputs box*/
+.form-container {
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #fff;
+  margin: 1rem 0 .5rem;
+  width: 100%;
+}
+
+.input {
+  background: none;
+  border: 0;
+  outline: 0;
+  height: 40px;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  font-size: .9rem;
+  padding: 8px 15px;
+}
+
+.form-section {
+  padding: 16px;
+  font-size: .85rem;
+  background-color: #e0ecfb;
+  box-shadow: rgb(0 0 0 / 8%) 0 -1px;
+}
+
+.form-section a {
+  font-weight: bold;
+  color: #0066ff;
+  transition: color .3s ease;
+}
+
+.form-section a:hover {
+  color: #005ce6;
+  text-decoration: underline;
+}
+
+/*Button*/
+.form button {
+  background-color: #0066ff;
+  color: #fff;
+  border: 0;
+  border-radius: 24px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color .3s ease;
+}
+
+.form button:hover {
+  background-color: #005ce6;
+}
+  </style>
 </head>
 <body class="bg-gray-50">
   <!-- Navbar -->
@@ -32,24 +123,26 @@
     </div>
   </nav>
 
-  <!-- Welcome Section -->
   <section class="relative bg-[#DC143C] py-20 lg:py-32 text-center">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
-      <h2 class="text-5xl font-bold leading-tight mb-6">
-        अब हामी 'क' देखी 'क:' सम्म लेख्न सिक्क्सम        </h2>
-            <h2>क = ka</h2>
-            <h2>का = kaa</h2>
-            <h2>कि = ki</h2>
-            <h2>कु = ku</h2>
-            <h2>के = ke</h2>
-            <h2>कै = kai</h2>
-            <h2>को = ko</h2>
-            <h2>कौ =kau</h2>
-            <h2>कम = kam</h2>
-            <h2>क:  kah</h2> <br>
+    <div class="relative-center">
+      <div class="form-box">
+        <form class="form" action="/test1" method="POST">
+          <span class="title">परीक्षण</span>
+          <span class="subtitle">निम्नको अंग्रेजी संस्करण लेख्नुहोस्</span>
+          <div class="form-container">
+            <input type="text" name="ka" id="ka" class="input" placeholder="क">
+            <input type="text" name="kaa" id="kaa" class="input" placeholder="का">
+            <input type="text" name="ki" id="ki" class="input" placeholder="कि">
+            <input type="text" name="ku" id="ku" class="input" placeholder="कु">
+            <input type="text" name="kai" id="kai" class="input" placeholder="कै">
+            <input type="text" name="ko" id="ko" class="input" placeholder="को">
+          </div>
+          <button>Submit</button>
+        </form>
+      </div>
     </div>
-    <a href="test1"><button style="color: rgb(220, 9, 26); background-color: aliceblue; padding: 2px 10px 2px 10px; border-radius: 5%;">तेस्त </button></a>
   </section>
+  
   <!-- Footer -->
   <footer class="bg-gray-900 text-white py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
